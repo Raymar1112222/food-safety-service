@@ -22,7 +22,7 @@ This service is designed to support Operators, Quality Managers and Food Safety 
 1. Create a single test result
     POST /api/rest-results
     Body:
-        json
+        ```json
            [{
                 "facilityId: "facility-1",
                 "productionLineI": "line-a",
@@ -37,18 +37,19 @@ This service is designed to support Operators, Quality Managers and Food Safety 
              "location": "Sorting area",
              "timestamp": "2026-02-31T10:30:00Z"
              }]
+         ```
 
-2. Retrieve by historical results
+2. Retrieve by historical results  
     GET /api/test-results
 
-3. Filter by facility
+3. Filter by facility  
     GET /api/test-results?facilityId=facility-1
 
-4. Filter by production line
+4. Filter by production line  
     GET /api/test-results?productionLineId=line-a
 
 # DATA PERSISTENCE
-For this assingment, an in-memory data store us used to persist test results.
+For this assingment, an in-memory data store is used to presist test results.
 
 The data is stored in a process-local array and exists only while the application is running.
 
@@ -61,9 +62,9 @@ In a production environment, this would be replaced with a persistent database s
 
 1. Goal and product focus
     The service is desinged to support three main user groups:
-        1. Operators
-        2. Quality Managers
-        3. Food Safety Leads
+        1. Operators  
+        2. Quality Managers  
+        3. Food Safety Leads  
     The API is intentionally minimal to support fast data entry and reliable data retrieval.
 
         1. Operators
@@ -85,17 +86,6 @@ A suitable AWS deployment architecture would include:
 2. AWS Lambda (Node.js/ TypeScript) for running the backend service.
 3. Amazon RDS (PostgreSQL) or DynamoDB for persistend storage.
 
-# HIGH LEVEL ARCHITECTURE
-Client
-   |
-API Gateway
-   |
-Lambda (Food Safety API)
-   |
-Database (RDS or DynamoDB)
-
-API Gateway provides secure access, throttling and request management. Lambda allows the service to scale automatically without managing service.
-
 # PRODUCT INSIGHTS FOR FOOD SAFETY LEADS
 The most important data points to surface first are:
 1. CFU Trends over time per facility and production line
@@ -108,10 +98,10 @@ These insights help identity risk patterns early and support preventive actions.
 
 # SCOPE AND LIMITATIONS
 This project was intentionally scoped to fit within a short take-home assignment.
-The following features are not implemented:
-    1. authentication and authorization
-    2. data validation beyond required fields
-    3. alerting or notification logic
-    4. user interface
+The following features are not implemented:  
+1. authentication and authorization  
+2. data validation beyond required fields  
+3. alerting or notification logic  
+4. user interface  
 The focus is on API design, clean structure, and product driven backend reasoning.
 
