@@ -22,22 +22,22 @@ This service is designed to support Operators, Quality Managers and Food Safety 
 1. Create a single test result  
     POST /api/rest-results  
     Body:  
-        ```yaml
-           {
-                "facilityId: "facility-1",
-                "productionLineI": "line-a",
-                "cfuCount": 120,
-                "location": "Packaging area",
-                "timestamp": "2026-01-31 T10:30:00Z"
-            },
-             {
-             "facilityId": "facility-2",
-             "productionLineId": "line-b",
-             "cfuCount": 150,
-             "location": "Sorting area",
-             "timestamp": "2026-02-31T10:30:00Z"
-             }
-         
+ ```json
+ {
+ "facilityId: "facility-1",
+ "productionLineI": "line-a",
+ "cfuCount": 120,
+ "location": "Packaging area",
+ "timestamp": "2026-01-31 T10:30:00Z"
+ },
+ {
+ "facilityId": "facility-2",
+ "productionLineId": "line-b",
+ "cfuCount": 150,
+ "location": "Sorting area",
+ "timestamp": "2026-02-31T10:30:00Z"
+ }
+ ```
 
 2. Retrieve by historical results  
     GET /api/test-results
