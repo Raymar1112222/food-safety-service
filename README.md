@@ -19,9 +19,9 @@ This service is designed to support Operators, Quality Managers and Food Safety 
     GET /api/health
 
 # API ENDPOINTS
-1. Create a single test result
-    POST /api/rest-results
-    Body:
+1. Create a single test result  
+    POST /api/rest-results  
+    Body:  
         ```json
            [{
                 "facilityId: "facility-1",
