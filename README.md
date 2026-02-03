@@ -60,15 +60,15 @@ In a production environment, this would be replaced with a persistent database s
 
 # HIGH LEVEL THINKING
 
-1. Goal and product focus
-    The service is desinged to support three main user groups:
+1. Goal and product focus  
+    The service is desinged to support three main user groups:  
         1. Operators  
         2. Quality Managers  
         3. Food Safety Leads  
     The API is intentionally minimal to support fast data entry and reliable data retrieval.
 
-        1. Operators
-             Operators need to log results quickly.
+        1. Operators  
+            Operators need to log results quickly.
             The API provides a simple endpoint for creating test results with only the required fields submission to support automated data collection or manual input.
 
         2. Quality Managers
@@ -103,5 +103,6 @@ The following features are not implemented:
 2. data validation beyond required fields  
 3. alerting or notification logic  
 4. user interface  
+
 The focus is on API design, clean structure, and product driven backend reasoning.
 
